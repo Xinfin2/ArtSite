@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Art Portfolio - Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Art by Nimilu</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="gallery-section">
+    <h2>A moment in time </h2>
+    <p>A moment in time is a publication created in celebration of the pages artist bookfair in Leeds 2023.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openModal('A moment in time cover.png', 'This is Art Piece 1 - Abstract Interpretation of Nature.')">
+        <img src="A moment in time cover.png" alt="Art 1">
+      </div>
+      <div class="gallery-item" onclick="openModal('moment in time front page.png', 'This is Art Piece 2 - Modern Digital Collage.')">
+        <img src="moment in time front page.png" alt="Art 2">
+      </div>
+      <div class="gallery-item" onclick="openModal('a moment in time monoprints.png', 'This is Art Piece 3 - Futuristic Landscape.')">
+        <img src="a moment in time monoprints.png" alt="Art 3">
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Mural Textile Sorting facility </h2>
+    <p>Made in colaboration with Mai van Esch</p>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openModal('Trash.jpg', 'This is Art Piece 1 - Abstract Interpretation of Nature.')">
+        <img src="Trash.jpg" alt="Art 1">
+      </div>
+	  <div class="gallery-item" onclick="openModal('Trash2.jpg', 'This is Art Piece 3 - Futuristic Landscape.')">
+        <img src="Trash2.jpg" alt="Art 3">
+      </div>
+    </div>
+  </section>
+  
+    <section class="gallery-section">
+    <h2>LET ME HOLD YOU</h2>
+    <p>Nina explores creating art through tuftnig. Central in her art is the interest in her surroundings and the details. Using wool supports her love for the softer things in life as well as touchable art.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openModal('LMHY.jpg', 'This is Art Piece 1 - Abstract Interpretation of Nature.')">
+        <img src="LMHY.jpg" alt="Art 1">
+      </div>
+	  <div class="gallery-item" onclick="openModal('LMHY2.jpg', 'This is Art Piece 3 - Futuristic Landscape.')">
+        <img src="LMHY2.jpg" alt="Art 3">
+      </div>
+      <div class="gallery-item" onclick="openModal('LMHY3.jpg', 'This is Art Piece 2 - Modern Digital Collage.')">
+        <img src="LMHY3.jpg" alt="Art 2">
+      </div>
+    </div>
+	  <div class="gallery-grid">
+      <div class="gallery-item" onclick="openModal('LMHY4.jpg', 'This is Art Piece 2 - Abstract Interpretation of Nature.')">
+        <img src="LMHY4.jpg" alt="Art 2">
+      </div>
+	  <div class="gallery-item" onclick="openModal('LMHY text.png', 'This is Art Piece 3 - Futuristic Landscape.')">
+        <img src="LMHY text.png" alt="Art 3">
+      </div>
+      <div class="gallery-item" onclick="openModal('LMHY6.jpg', 'This is Art Piece 2 - Modern Digital Collage.')">
+        <img src="LMHY6.jpg" alt="Art 2">
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="overlay" class="overlay"></div>
+  <div id="art-modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modal-image" src="" alt="Modal Art">
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Art by Nimilu | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function openModal(imageSrc, description) {
+      document.getElementById('art-modal').style.display = 'flex';
+      document.getElementById('overlay').style.display = 'block';
+      document.getElementById('modal-image').src = imageSrc;
+      document.getElementById('modal-text').textContent = description;
+    }
+
+    function closeModal() {
+      document.getElementById('art-modal').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
